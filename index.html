@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-editor</title>
+    <style>
+        
+    </style>
+    <link href="index.css" rel="stylesheet" type="text/css"/>
+    <link href="plugin/codemirror-5.58.1/lib/codemirror.css" rel="stylesheet" type="text/css">
+    <link href="plugin/codemirror-5.58.1/theme/dracula.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preview -->
+    <div class="preview-area">
+        <iframe id="preview-window"></iframe>
+    </div>
+
+    <!-- code and table -->
+    <div class="code-area">
+        <!-- Tabs -->
+        <div class="w3-bar w3-black">
+            <button class="w3-bar-item w3-button" onclick="switchTab('Code')">Code</button>
+            <button class="w3-bar-item w3-button" onclick="switchTab('Placeholders')">Placeholders</button>
+            <button class="w3-bar-item w3-button" onclick="switchTab('TemplateTab')">Template</button>
+        </div>
+
+        <!-- code tab -->
+        <div id="Code" class="tab">
+            <textarea class="codemirror-textarea" id="editor" placeholder="HTML Code" oninput="showPreview()"></textarea>
+        </div>
+
+        <!-- table tab -->
+        <div id="Placeholders" class="tab" style="display:none">
+            <button class="generateTable" onclick="generateTable()">Gerar tabela</button>
+            <button class="replaceValues" onclick="replaceValues()">Gerar HTML final</button>
+            <table id="placeholders-table">
+            </table>
+        </div>
+
+        <!-- template tab -->
+        <div id="TemplateTab" class="tab" style="display: none;">
+            <input type="file" id="file-selector"/>
+        </div>
+    </div>
+
+
+    <script src="index.js" rel="javascript"></script>
+    <script src="plugin/codemirror-5.58.1/lib/codemirror.js"></script>
+    <script src="plugin/codemirror-5.58.1/mode/xml/xml.js"></script>
+    <script src="plugin/codemirror-5.58.1/addon/edit/closetag.js"></script>
+
+
+</body>
+
+</html>
