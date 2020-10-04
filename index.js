@@ -12,13 +12,14 @@ var globalJS;
 
 // Show html preview in the left
 function showPreview() {
-    var htmlCode = globalHTML;
+    var htmlCode = globalReplacedHTML;
     var cssCode = "<style>" + globalCSS + "</style>";
     var jsCode = "<scr" + "ipt>" + globalJS + "</scr" + "ipt>";
     var frame = document.getElementById("preview-window").contentWindow.document;
     frame.open();
     frame.write(htmlCode + cssCode + jsCode);
     frame.close();
+    // globalReplacedHTML = globalHTML;
 }
 
 // Load COdeMirror textareas
@@ -58,15 +59,21 @@ window.addEventListener("load", function () {
     // When you edit, the preview is updated with the new value
     editorHTML.on('change', function (cMirror) {
         globalHTML = cMirror.getValue();
-        showPreview();
+        globalReplacedHTML = globalHTML;
+        replaceValues();
+        // showPreview();
     })
     editorCSS.on('change', function (cMirror) {
         globalCSS = cMirror.getValue();
-        showPreview();
+        replaceValues();
+
+        // showPreview();
     })
     editorJS.on('change', function (cMirror) {
         globalJS = cMirror.getValue();
-        showPreview();
+        replaceValues();
+
+        // showPreview();
     })
 })
 
@@ -130,7 +137,7 @@ function replaceValues() {
         for (var j = 0; j < objCells.length; j++) {
             if (j % 2) {
                 let value = objCells.item(j).innerHTML.match(/(?<=>)(.*)(?=<)/)[0]
-                if (value != '') {
+                if (value != '' && value != '<br>') {
                     replace = value
                 }
                 else {
@@ -151,10 +158,12 @@ function replaceValues() {
             value: replace
         });
     }
+    let newHTML = globalHTML;
     for (i in find_and_replace) {
-        globalReplacedHTML = globalHTML.replaceAll(find_and_replace[i].key, find_and_replace[i].value)
+        newHTML = newHTML.replaceAll(find_and_replace[i].key, find_and_replace[i].value)
     }
-    setHTMLCode(globalReplacedHTMLHTML, false)
+    globalReplacedHTML = newHTML
+    showPreview();
 }
 
 const fileSelector = document.getElementById('file-selector');
@@ -178,6 +187,7 @@ function readTemplate(file) {
 
 function setHTMLCode(code, buildTable) {
     globalHTMLEditor.getDoc().setValue(code);
+    globalHTML = code
     if (buildTable) {
         generateTable();
     }
