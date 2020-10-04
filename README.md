@@ -8,6 +8,8 @@ Project created to speed up html creation when you already have a template to us
 ### Code Tab
 In this tab, you can write your html code as you wish. This will be your template, or your skeleton code, that you will use as a structure to build more htmls with the same layout.
 
+![Code](https://github.com/brenorobazza/html-templates/blob/main/README_aux/code.png?raw=true)
+
 In this code, you can use **placeholders**. They are words that you put between curly brackets, like ```{image_source}``` or ```{image_alt}``` in the example:
 
 ```html
@@ -17,7 +19,7 @@ In this code, you can use **placeholders**. They are words that you put between 
 The placeholders are the "variables" that you want to change when you use the template to build more code.
 
 ### Placeholders tab
-When you finish your code, you can go to this tab and click the "Build placeholders table" button. This will build a table with all your placeholders
+When you finish your code, you can go to this tab and click the "Build placeholders table" button. This will build a table with all your placeholders like tihs:
 
-![Placeholders](https://github.com/brenorobazza/html-templates/blob/main/README_aux/placeholders.png)
+![Placeholders](https://github.com/brenorobazza/html-templates/blob/main/README_aux/placeholders.png?raw=true)
 
