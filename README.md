@@ -19,5 +19,5 @@ The placeholders are the "variables" that you want to change when you use the te
 ### Placeholders tab
 When you finish your code, you can go to this tab and click the "Build placeholders table" button. This will build a table with all your placeholders
 
-![Placeholders](https://github.com/brenorobazza/html-templates/README_aux/placeholders.png)
+![Placeholders](https://github.com/brenorobazza/html-templates/blob/main/README_aux/placeholders.png)
 
