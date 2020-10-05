@@ -10,6 +10,8 @@ var globalReplacedHTML;
 var globalCSS;
 var globalJS;
 
+var buildTableButton = document.getElementById('buildPlaceholdersTableButton')
+
 // Show html preview in the left
 function showPreview() {
     var htmlCode = globalReplacedHTML;
@@ -121,10 +123,13 @@ function generateTable() {
         if ($.inArray(el, placeholders) === -1) placeholders.push(el);
     });
     addPlaceholders(placeholders)
+    buildTableButton.disabled = true;
+
 }
 
 // Replace all the placeholders for it's corresponding value
 function replaceValues() {
+    buildTableButton.disabled= false;
     var table = document.getElementById('placeholders-table');
 
     var find_and_replace = [];
