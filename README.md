@@ -19,11 +19,11 @@ In the HTML code, you can use **placeholders**. They are words that you put betw
 The placeholders are the "variables" that you want to change when you use the template to build more code.
 
 ### Placeholders tab
-When you finish your code, you can go to this tab and click the "**Build placeholders table**" button. This will build a table with all your placeholders like tihs:
+When you finish your code, you can go to this tab and click the "**Build placeholders table**" button. This will build a table with all your placeholders like this:
 
 ![Placeholders](https://github.com/brenorobazza/html-templates/blob/main/readme-aux-folderplaceholders.png?raw=true)
 
-In the second column you put the values that will replace the placeholders in the code. When you finish, you can click the "**Build Final HTML**" button, this will replace all placeholders in the code for the values that you chose. If you didn't add a value, the placeholder will remain.
+In the second column you put the values that will replace the placeholders in the code. When you finish, you can click the "**Build Final HTML**" button, this will replace all placeholders in the code for the values that you chose. If the second column is empty, the placeholder will remain.
 
 ### Template tab
 This tab is were you upload your .html file if you already have a template ready, so you don't have to copy it's text.
