@@ -205,3 +205,13 @@ document.getElementById('download').addEventListener('click', (function(){
     this.href = "data:text/plain;charset=UTF-8,"  + encodeURIComponent(globalReplacedHTML);
 }))
 ;
+
+function copyText() {
+    const el = document.createElement('textarea');
+    el.value = globalReplacedHTML;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    alert('copied')
+};

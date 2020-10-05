@@ -48,10 +48,6 @@ body {
     height: 100%;
 }
 
-.w3-bar {
-    background-color: #FFF;
-}
-
 table, tr, td {
     background-color: #1B1A1E;
     border: solid 1px #FFF;
@@ -68,6 +64,9 @@ td {
 .w3-bar {
     padding: 10px;
     background-color: #1B1A1E;
+    width: 100%;
+    color: white;
+    white-space: nowrap;
 }
 
 .w3-bar-item {

@@ -8,7 +8,7 @@ Project created to speed up html creation when you already have a template to us
 ### Code Tab
 In this tab, you can write your HTML, CSS and JS code as you wish. This will be your template, or your skeleton code, that you will use as a structure to build more htmls with the same layout.
 
-![Code](https://github.com/brenorobazza/html-templates/blob/main/README_aux/code.png?raw=true)
+![Code](https://github.com/brenorobazza/html-templates/blob/main/readme-aux-folder/code.png?raw=true)
 
 In the HTML code, you can use **placeholders**. They are words that you put between curly brackets, like ```{image_source}``` or ```{image_alt}``` in the following example:
 
@@ -21,7 +21,7 @@ The placeholders are the "variables" that you want to change when you use the te
 ### Placeholders tab
 When you finish your code, you can go to this tab and click the "**Build placeholders table**" button. This will build a table with all your placeholders like tihs:
 
-![Placeholders](https://github.com/brenorobazza/html-templates/blob/main/README_aux/placeholders.png?raw=true)
+![Placeholders](https://github.com/brenorobazza/html-templates/blob/main/readme-aux-folderplaceholders.png?raw=true)
 
 In the second column you put the values that will replace the placeholders in the code. When you finish, you can click the "**Build Final HTML**" button, this will replace all placeholders in the code for the values that you chose. If you didn't add a value, the placeholder will remain.
 
