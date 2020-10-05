@@ -6,7 +6,7 @@ Project created to speed up html creation when you already have a template to us
 - in there you have 3 tabs: **Code**, **Placeholders** and **Template**
 
 ### Code Tab
-In this tab, you can write your html, CSS and JS code as you wish. This will be your template, or your skeleton code, that you will use as a structure to build more htmls with the same layout.
+In this tab, you can write your HTML, CSS and JS code as you wish. This will be your template, or your skeleton code, that you will use as a structure to build more htmls with the same layout.
 
 ![Code](https://github.com/brenorobazza/html-templates/blob/main/README_aux/code.png?raw=true)
 
