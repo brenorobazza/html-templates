@@ -169,7 +169,6 @@ function replaceValues() {
     }
     globalReplacedHTML = newHTML
     showPreview();
-    buildTableButton.disabled = true
 }
 
 const fileSelector = document.getElementById('file-selector');
