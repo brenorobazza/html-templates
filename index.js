@@ -62,18 +62,18 @@ window.addEventListener("load", function () {
     editorHTML.on('change', function (cMirror) {
         globalHTML = cMirror.getValue();
         globalReplacedHTML = globalHTML;
-        replaceValues();
+        replaceValues(false);
         // showPreview();
     })
     editorCSS.on('change', function (cMirror) {
         globalCSS = cMirror.getValue();
-        replaceValues();
+        replaceValues(false);
 
         // showPreview();
     })
     editorJS.on('change', function (cMirror) {
         globalJS = cMirror.getValue();
-        replaceValues();
+        replaceValues(false);
 
         // showPreview();
     })
@@ -128,8 +128,8 @@ function generateTable() {
 }
 
 // Replace all the placeholders for it's corresponding value
-function replaceValues() {
-    buildTableButton.disabled= false;
+function replaceValues(disableBuildTable) {
+    buildTableButton.disabled = false;
     var table = document.getElementById('placeholders-table');
 
     var find_and_replace = [];
@@ -169,6 +169,9 @@ function replaceValues() {
     }
     globalReplacedHTML = newHTML
     showPreview();
+    if (disableBuildTable) {
+        buildTableButton.disabled = true;
+    }
 }
 
 const fileSelector = document.getElementById('file-selector');
