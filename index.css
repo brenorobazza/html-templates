@@ -75,6 +75,12 @@ td {
     background-color: white;
 }
 
+.downloadButton {
+    padding: 8px;
+    color: #FFF;
+    background-color: #1ebb1e;
+}
+
 .file {
     padding: 10px;
     color: white;

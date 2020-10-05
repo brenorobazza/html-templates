@@ -192,3 +192,9 @@ function setHTMLCode(code, buildTable) {
         generateTable();
     }
 }
+
+document.getElementById('download').addEventListener('click', (function(){
+    console.log("download")
+    this.href = "data:text/plain;charset=UTF-8,"  + encodeURIComponent(globalReplacedHTML);
+}))
+;
